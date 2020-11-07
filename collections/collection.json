@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "a5f4c59b-fa0c-4781-8087-8d15887a4261",
+		"name": "retoJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"admin@admin.com\",\n    \"password\" : \"soyadmin\",\n    \"roles\": [\"admin\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register admin (already exist, bad request)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"admin@admin.com\",\n    \"password\" : \"soyadmin\",\n    \"roles\": [\"admin\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"cvalentty@hotmail.com\",\n    \"password\" : \"contraseña\",\n    \"roles\": [\"client\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"empresa1@hotmail.com\",\n    \"password\" : \"empresa2420\",\n    \"roles\": [\"seller\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products (everyone can make it)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE2ZTgyNDI5MTNhMDA3OTlmZTY5ZTEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFh5LzZXZXl1VlhoaS9QYlJuRUFYT3UuY01vNy9pTjNheDl6ZTBpLm11bXIvdnBneE9XLkdpIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjA0NzczOTYzLCJleHAiOjE2MDQ4NjAzNjN9.h5JoVjXPzdDNGkRjyv9BxcdFiSenT4gmRO-3m6JgOTo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"admin@admin.com\",\n    \"password\" : \"soyadmin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"cvalentty@hotmail.com\",\n    \"password\" : \"contraseña\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login client (incorrrect credentials, bad request)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"cvalentty@hotmail.com\",\n    \"password\" : \"nosecualeslacontraseña\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login seller",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"empresa1@hotmail.com\",\n    \"password\" : \"empresa2420\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert product as admin (correct)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE2ZTgyNDI5MTNhMDA3OTlmZTY5ZTEiLCJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJFh5LzZXZXl1VlhoaS9QYlJuRUFYT3UuY01vNy9pTjNheDl6ZTBpLm11bXIvdnBneE9XLkdpIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjA0NzczOTYzLCJleHAiOjE2MDQ4NjAzNjN9.h5JoVjXPzdDNGkRjyv9BxcdFiSenT4gmRO-3m6JgOTo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idproducto\": \"5\",\n    \"nombreProducto\": \"Mezcla Gumbo del chef Anton\",\n    \"idProveedor\": \"2\",\n    \"idCategoria\": \"2\",\n    \"cantidadPorUnidad\": \"36 cajas\",\n    \"precioUnidad\": \"21\",\n    \"unidadesEnExistencia\": \"0\",\n    \"unidadesEnPedido\": \"0\",\n    \"nivelNuevoPedido\": \"0\",\n    \"suspendido\": \"1\",\n    \"categoriaProducto\": \"Categoria D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert product as client (incorrect)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE2ZTgzMzI5MTNhMDA3OTlmZTY5ZTIiLCJlbWFpbCI6ImN2YWxlbnR0eUBob3RtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHJRUlhnVHRCMmFlOVFKNGxrS2pTTmVjVFpibVdlTnJGdUFnVjdDaVBOdjN1RzJwNHh3Yy9PIiwicm9sZXMiOlsiY2xpZW50Il0sImlhdCI6MTYwNDc3Mzk5MCwiZXhwIjoxNjA0ODYwMzkwfQ.naI2pTiSLUv39zBYwHe-bbWz3x_vRwzdgLEQIHdDzzg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idproducto\": \"5\",\n    \"nombreProducto\": \"Mezcla Gumbo del chef Anton\",\n    \"idProveedor\": \"2\",\n    \"idCategoria\": \"2\",\n    \"cantidadPorUnidad\": \"36 cajas\",\n    \"precioUnidad\": \"21\",\n    \"unidadesEnExistencia\": \"0\",\n    \"unidadesEnPedido\": \"0\",\n    \"nivelNuevoPedido\": \"0\",\n    \"suspendido\": \"1\",\n    \"categoriaProducto\": \"Categoria D\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
